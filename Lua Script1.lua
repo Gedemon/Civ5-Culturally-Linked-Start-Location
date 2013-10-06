@@ -1,0 +1,4 @@
+-- Lua CulturallyLinkedCS
+-- Author: Gedemon
+-- DateCreated: 6/11/2012 1:55:14 AM
+--------------------------------------------------------------

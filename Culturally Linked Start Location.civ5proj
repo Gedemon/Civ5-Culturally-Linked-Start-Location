@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Deploy" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <ProjectGuid>{eef6156c-dc70-4a0d-949e-c67ee61e72e1}</ProjectGuid>
+    <Name>Culturally Linked Start Locations</Name>
+    <Guid>01ef72bd-a570-49f1-af19-5afef495515e</Guid>
+    <ModVersion>5</ModVersion>
+    <Stability>Beta</Stability>
+    <Teaser>Culturally Linked Start Locations</Teaser>
+    <Description>Civilizations (and City-States) will start close to each other depending of their [ICON_CULTURE] cultural art style (European, Greco-Roman, Middle-East, Asia, South-American, Polynesian) [NEWLINE][NEWLINE]Culture Group relative distance is also used (ie Greco-Roman civs should be closer to European than Asian civs...) [NEWLINE][NEWLINE]This mod disable the start bias option.</Description>
+    <Authors>Gedemon</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>false</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <SupportsMac>true</SupportsMac>
+    <AssemblyName>Culturally Linked Start Location</AssemblyName>
+    <RootNamespace>Culturally Linked Start Location</RootNamespace>
+    <ModReferences>
+      <Association>
+        <Type>Mod</Type>
+        <Name>CiVUP VEM</Name>
+        <Id>01127f62-3896-4897-b169-ecab445786cd</Id>
+        <MinVersion>0</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+    </ModReferences>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Package Only' ">
+    <PackageMod>true</PackageMod>
+    <DeployMod>false</DeployMod>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Deploy Only' ">
+    <PackageMod>false</PackageMod>
+    <DeployMod>true</DeployMod>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ASP_Vanilla.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ASP_GodsAndKings.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ASP_Common.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="AssignStartingPlots.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ASP_Create_GodsAndKings.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ASP_Create_Vanilla.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="readme.txt">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />
+</Project>
